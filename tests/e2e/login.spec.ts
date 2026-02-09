@@ -21,7 +21,9 @@ test.describe('Login', () => {
     { label: 'valid', ...users.valid },
   ];
   for (const { label, username, password } of credentials) {
-    test(`@regression login with ${label} credentials shows expected result`, async ({ loginPage }) => {
+    test(`@regression login with ${label} credentials shows expected result`, async ({
+      loginPage,
+    }) => {
       await loginPage.goto('/login');
       await loginPage.login(username, password);
       const flash = await loginPage.getFlashText();

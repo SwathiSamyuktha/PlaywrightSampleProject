@@ -64,7 +64,7 @@ npm test
 | `npm run test:integration` | API–UI integration |
 | `npm run test:ui`          | Playwright UI      |
 | `npm run test:smoke`       | Smoke tests only   |
-| `npm run test:regression`  | Full regression   |
+| `npm run test:regression`  | Full regression    |
 | `npm run lint`             | Run ESLint         |
 | `npm run lint:fix`         | ESLint with fix    |
 | `npm run format`           | Prettier format    |
