@@ -2,10 +2,10 @@
 
 ## GitHub Workflows
 
-| Workflow               | Trigger                                             | What runs                                |
-| ---------------------- | --------------------------------------------------- | ---------------------------------------- |
+| Workflow               | Trigger                                             | What runs                                                  |
+| ---------------------- | --------------------------------------------------- | ---------------------------------------------------------- |
 | **CI (Build + Smoke)** | Push/PR to `main` or `master`                       | Lint, format check, smoke tests (`@smoke`, Chromium only). |
-| **Nightly Regression** | Daily at 2:00 AM UTC; or manual `workflow_dispatch` | Full regression suite (`@regression`).   |
+| **Nightly Regression** | Daily at 2:00 AM UTC; or manual `workflow_dispatch` | Full regression suite (`@regression`).                     |
 
 ## Test tags
 
