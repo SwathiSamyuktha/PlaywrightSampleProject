@@ -63,6 +63,8 @@ npm test
 | `npm run test:visual`      | Visual tests       |
 | `npm run test:integration` | API–UI integration |
 | `npm run test:ui`          | Playwright UI      |
+| `npm run test:smoke`       | Smoke tests only   |
+| `npm run test:regression`  | Full regression   |
 | `npm run lint`             | Run ESLint         |
 | `npm run lint:fix`         | ESLint with fix    |
 | `npm run format`           | Prettier format    |
@@ -94,8 +96,15 @@ npm test
 
 See **how-to.md** for step-by-step instructions.
 
+## CI / Pipelines
+
+- **Build (push/PR):** Lint, format check, smoke tests. See `.github/workflows/ci.yml`.
+- **Nightly:** Full regression at 2:00 AM UTC. See `.github/workflows/nightly-regression.yml`.
+- **Email:** Sent to swathi.samyuiktha@fintexinc.com after each run. Configure SMTP secrets (see **docs/ci-and-pipelines.md**).
+
 ## Docs
 
+- **docs/ci-and-pipelines.md** — CI, nightly, tags, email setup.
 - **docs/ui-automation-best-practices.md** — BlazeMeter’s 15 UI automation practices mapped to this framework.
 - **docs/locator-strategy.md** — Playwright locator priority (getByRole, getByLabel, …).
 - **docs/best-practices.md** — Practices and where they’re implemented.

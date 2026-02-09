@@ -10,6 +10,8 @@
     "test:api": "npx playwright test tests/api",
     "test:visual": "npx playwright test tests/visual",
     "test:integration": "npx playwright test tests/integration",
+    "test:smoke": "npx playwright test --grep \"@smoke\"",
+    "test:regression": "npx playwright test --grep \"@regression\"",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "format": "prettier --write \"**/*.{ts,json,md}\"",

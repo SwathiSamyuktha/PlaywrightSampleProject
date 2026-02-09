@@ -4,7 +4,7 @@
 import { test, expect } from '../../fixtures/base';
 
 test.describe('API (ApiTest)', () => {
-  test('GET returns 200', async ({ request, logger }) => {
+  test('@regression GET returns 200', async ({ request, logger }) => {
     logger.info('ApiTest: GET /');
     const response = await request.get('/');
     expect(response.ok()).toBe(true);
@@ -12,7 +12,7 @@ test.describe('API (ApiTest)', () => {
     logger.info('Response status', { status: response.status() });
   });
 
-  test('GET /login returns 200', async ({ request, logger }) => {
+  test('@regression GET /login returns 200', async ({ request, logger }) => {
     logger.info('ApiTest: GET /login');
     const res = await request.get('/login');
     expect(res.status()).toBe(200);

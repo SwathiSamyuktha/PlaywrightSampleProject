@@ -10,7 +10,7 @@ import { PlaywrightWebDriver } from '../../page-objects/WebDriver';
 import { LoginPageWithDriver } from '../../page-objects/LoginPageWithDriver';
 
 test.describe('API–UI integration', () => {
-  test('GET / via API returns 200 and body contains key content; UI shows same', async ({
+  test('@smoke @regression GET / via API returns 200 and body contains key content; UI shows same', async ({
     request,
     page,
     context,
@@ -30,7 +30,7 @@ test.describe('API–UI integration', () => {
     logger.info('UI / matches API content');
   });
 
-  test('GET /login via API returns 200 with Login; UI login form is visible', async ({
+  test('@regression GET /login via API returns 200 with Login; UI login form is visible', async ({
     request,
     page,
     context,
