@@ -1,0 +1,36 @@
+{
+  "name": "pw-template",
+  "version": "1.0.0",
+  "description": "Playwright test framework with OOP structure — BaseTest, PageObject, Logger, TestSuite",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:e2e": "npx playwright test tests/e2e",
+    "test:api": "npx playwright test tests/api",
+    "test:visual": "npx playwright test tests/visual",
+    "test:integration": "npx playwright test tests/integration",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.{ts,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,json,md}\"",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.ts": ["eslint --fix", "prettier --write"],
+    "*.{json,md}": ["prettier --write"]
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^25.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.0.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.6.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0"
+  }
+}

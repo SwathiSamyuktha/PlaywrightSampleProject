@@ -1,0 +1,1 @@
+{ "auth": { "login": "/login", "logout": "/logout" }, "users": "/users", "posts": "/posts" }
