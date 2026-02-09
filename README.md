@@ -100,7 +100,7 @@ See **how-to.md** for step-by-step instructions.
 
 - **Build (push/PR):** Lint, format check, smoke tests. See `.github/workflows/ci.yml`.
 - **Nightly:** Full regression at 2:00 AM UTC. See `.github/workflows/nightly-regression.yml`.
-- **Email:** Sent to swathi.samyuiktha@fintexinc.com after each run. Configure SMTP secrets (see **docs/ci-and-pipelines.md**).
+- **Notifications:** Use GitHub's default setup (Settings → Notifications → Actions) for email on workflow failures (see **docs/ci-and-pipelines.md**).
 
 ## Docs
 

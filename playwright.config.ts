@@ -19,10 +19,14 @@ export default defineConfig({
     navigationTimeout: env.navigationTimeout,
   },
   outputDir: 'reports/screenshots',
-  projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
-    { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
-  ],
+  // Smoke CI installs only Chromium; use both browsers locally and in nightly regression.
+  projects:
+    env.isCI && !process.env.FULL_REGRESSION
+      ? [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }]
+      : [
+          { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+          { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
+        ],
   // Optional: run full suite on Chromium only, smaller "browser compat" set on Firefox (see BlazeMeter #5):
   // projects: [
   //   { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
